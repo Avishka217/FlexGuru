@@ -43,4 +43,10 @@ class Pages extends Controller
     {
         $this->view('pages/becomeastudent');
     }
+    
+    public function tutorprofileview()
+    {
+        $this->view('pages/tutorprofileview');
+    }
+
 }
