@@ -16,6 +16,7 @@ include APPROOT . '/views/student/includes/header.php';
     </title>
     <link rel="stylesheet" href="<?php echo URLROOT . '/public/css/crystalys-v2.css' ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         * {
@@ -160,7 +161,7 @@ include APPROOT . '/views/student/includes/header.php';
 
         }
 
-        .successupdate {
+        #successupdate {
 
             text-align: center;
             padding: 4px;
@@ -170,6 +171,7 @@ include APPROOT . '/views/student/includes/header.php';
             left: -11px;
             color: #70B276;
             border: 1px solid #70B276;
+
         }
 
 
@@ -261,9 +263,9 @@ include APPROOT . '/views/student/includes/header.php';
             </div>
 
             <div class="right">
+                <!-- < echo URLROOT; /student/settings --> 
 
-
-                <form action="<?php echo URLROOT; ?>/student/settings" method="POST">
+                <form id="updateaccount"  method="POST">
                     <div class="table">
                         <h6>UPDATE ACCOUNT</h6>
                         <table style="margin: 5px 0;">
@@ -315,10 +317,26 @@ include APPROOT . '/views/student/includes/header.php';
                         </table>
                 </form>
 
-                <div class="successupdate">
-                    <i class="far fa-check-circle"></i>
-                    Settings successfully updated
-                </div>
+                <!-- this is where the success button comes -->
+
+                <?php
+                if (isset($data['status'])) {
+                    if ($data['status']) {
+                        echo `<div id='successupdate'>bla bla blqa </div>`;
+                    } else {
+                        echo `<div id='successupdate'>bla bla blqa </div>`;
+                    }
+                }
+                ?>
+                <script>
+                    $(document).ready(function() {
+                        $(document).on('submit', '#updateaccount', function() {
+                            // do your things
+                            return false;
+                        });
+                    });
+                </script>
+
 
             </div>
             <!-- all input fields are over  -->

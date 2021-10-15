@@ -40,7 +40,8 @@ class Student extends Controller
       'firstname' => '',
       'lastname' => '',
       'email' => '',
-      'city' => ''
+      'city' => '',
+      'status' => null 
     ];
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
       $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -48,11 +49,12 @@ class Student extends Controller
         'firstname' => trim($_POST['firstname']),
         'lastname' => trim($_POST['lastname']),
         'email' => trim($_POST['email']),
-        'city' => trim($_POST['city'])
+        'city' => trim($_POST['city']),
+        'status' => null
       ];
       if ($this->settingsModel->update($data)) {
-        //Ridirect to the main
-        header('location:' . URLROOT . '/student/studentprofileview');
+        $data['status'] = true;
+      
       } else {
         die('Something went wrong.');
       }
