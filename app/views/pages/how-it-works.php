@@ -17,7 +17,7 @@
 include APPROOT . '/views/includes/data.php';
 include APPROOT . '/views/includes/header.php';
 ?>
-<link rel="stylesheet" href="<?php echo URLROOT . '/public/css/public/pages/how-it-works/style.css' ?>" />
+<!-- <link rel="stylesheet" href="<?php echo URLROOT . '/public/css/public/pages/how-it-works/style.css' ?>" />
 <div class="fg-page">
     <div class="cover">
         <div class="overlay">
@@ -140,7 +140,87 @@ include APPROOT . '/views/includes/header.php';
             <div onclick="location.href='#'" class="secondary-overlay pointer"></div>
         </div>
     </div>
-</div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it Works</title>
+</head>
+
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ }
+ .container{
+     width: 100%;
+     min-height: 100vh;
+     background-color: #ffffff;
+
+ }
+ .container .row{
+     width: 85%;
+     margin: auto;
+
+ }
+ .container .row .heading-section{
+     width: 60%;
+     text-align: center;
+     margin: auto;
+     
+ }
+ .container .row .heading-section h1{
+     padding-top: 30px;
+     font-size: 50px;
+ }
+ .container .row .heading-section p{
+     margin-top: 15px;
+     font-size: 17px;
+     line-height: 1.5;
+ }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="heading-section">
+                <h1>How It Works</h1>
+                <p></p>
+            </div>
+            <div class="content-section">
+                <div class="card">
+                    <img src="/public/img/students/studentreq.png">
+                    <h4>Special Requests</h4>
+                    <p>Students can make special requests. First you are required to be logged in. Visit the profile page. Then by clicking "POST" button in the profile page, you will be directed to the service request interface.</p>
+                    <img src="/public/img/students/makingreq.png">
+                    <img src="/public/img/students/requi.png">
+                </div>
+                <div class="card">
+                    <img src="/public/img/students/studentreq.png">
+                    <h4>Purchase Gigs</h4>
+                    <p>Students can make special requests. First you are required to be logged in. Visit the profile page. Then by clicking "POST" button in the profile page, you will be directed to the service request interface.</p>
+                    <img src="/public/img/students/makingreq.png">
+                    <img src="/public/img/students/requi.png">
+                </div>
+                <div class="card">
+                    <img src="/public/img/students/studentreq.png">
+                    <h4>Publish Service Gigs</h4>
+                    <p>Students can make special requests. First you are required to be logged in. Visit the profile page. Then by clicking "POST" button in the profile page, you will be directed to the service request interface.</p>
+                    <img src="/public/img/students/makingreq.png">
+                    <img src="/public/img/students/requi.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 <?php
 include APPROOT . '/views/includes/footer.php';
 ?>
