@@ -306,7 +306,7 @@ class Registration extends Controller
         $data = $this->data;
 
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            //form process
+            /form process
             //Sanatize post data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
@@ -319,10 +319,10 @@ class Registration extends Controller
                 'confpassword' => trim($_POST['confpassword']),
                 'gender' => trim($_POST['gender']),
                 'dob' => trim($_POST['dob']),
-                'sub' => '',
+                'sub' => 1,
                 'role' => 'st',
                 'city' => trim($_POST['city']),
-                'photourl' => 'default.webp',
+                'photourl' => 'default.webp',   
                 'usernameError' => '',
                 'firstnameError' => '',
                 'lastnameError' => '',
@@ -392,3 +392,4 @@ class Registration extends Controller
         $this->view('registration/login');
     }
 }
+00
