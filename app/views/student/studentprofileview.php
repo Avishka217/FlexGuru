@@ -12,7 +12,7 @@ include APPROOT . '/views/student/includes/header.php';
 
         <div class="userbox">
             <div class="img">
-                <img src="<?php echo URLROOT . '/public/img/studentprofileview/user.png' ?>" id="userimg" alt="">
+                <img src="<?php echo URLROOT . '/public/img/studentprofileview/user.png'?>" id="userimg" alt="">
             </div>
             <center><span id="name">FirstName LastName</span>
                 <div class="star_rating">
